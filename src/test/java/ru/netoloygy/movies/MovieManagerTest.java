@@ -1,10 +1,11 @@
 package ru.netoloygy.movies;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MovieManagerTest {
     @Test
-    public void test(){
+    public void test() {
         MovieManager manager = new MovieManager();
 
         manager.addMovie("Film 1");
@@ -17,6 +18,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void shouldFindLastMoviesOverLimit() {
         MovieManager manager = new MovieManager(3);
@@ -30,6 +32,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void shouldFindLastMoviesBelowLimit() {
         MovieManager manager = new MovieManager(6);
@@ -43,6 +46,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void shouldFindLastMoviesEqualLimit() {
         MovieManager manager = new MovieManager();
@@ -57,6 +61,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void shouldFindLastMoviesEmpty() {
         MovieManager manager = new MovieManager();
